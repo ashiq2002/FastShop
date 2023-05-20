@@ -2,6 +2,8 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id "kotlin-kapt"
+    id("androidx.navigation.safeargs")
+    id("kotlin-parcelize")
 }
 
 android {
@@ -43,6 +45,8 @@ android {
 }
 
 dependencies {
+    //version code
+    def nav_version = "2.5.3"
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
@@ -54,4 +58,8 @@ dependencies {
 
     //Material View Pager Dots Indicator
     implementation "com.tbuonomo:dotsindicator:4.3"
+
+    //navigation component
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
 }

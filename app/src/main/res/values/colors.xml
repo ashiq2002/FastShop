@@ -10,4 +10,8 @@
 
     <color name="material_blueA200">#EE3160F8</color>
     <color name="indicatorStrokeColor">#3188F3</color>
+    <color name="textInputLayoutColor">#FAFAFA</color>
+    <color name="buttonColor">#3062c8</color>
+    <color name="lightGrey">#eeeff1</color>
+    <color name="grey">#757575</color>
 </resources>

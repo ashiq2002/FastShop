@@ -99,7 +99,6 @@ class IntroActivity : AppCompatActivity() {
 
     //store intro screen visited state
     private fun saveVisitedState(){
-        //create shared preference
         val sharedPreferences = applicationContext.getSharedPreferences(dbName, MODE_PRIVATE)
         sharedPreferences
             .edit()
