@@ -1,12 +1,13 @@
-package com.setbitzero.fastshop.adapter
+package com.setbitzero.fastshop.ui.intro.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.setbitzero.fastshop.databinding.IntroScreenBinding
+import com.setbitzero.fastshop.ui.intro.model.IntroScreenModel
 
-class IntroPagerAdapter(private val list: List<String>)
+class IntroPagerAdapter(private val list: List<IntroScreenModel>)
     :RecyclerView.Adapter<IntroPagerAdapter.IntroViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): IntroViewHolder {
@@ -21,8 +22,8 @@ class IntroPagerAdapter(private val list: List<String>)
     override fun getItemCount()=list.size
 
     inner class IntroViewHolder(private  val binding: IntroScreenBinding) :ViewHolder(binding.root){
-        fun bind(data:String){
-            binding.title = data
+        fun bind(data:IntroScreenModel){
+            binding.introScreen = data
         }
     }
 }
