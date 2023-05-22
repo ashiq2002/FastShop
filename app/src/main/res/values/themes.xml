@@ -23,7 +23,18 @@
         <item name="boxCornerRadiusTopStart">15dp</item>
         <item name="boxCornerRadiusTopEnd">15dp</item>
         <item name="boxStrokeWidth">0dp</item>
+        <item name="hintTextColor">@color/grey</item>
+        <item name="android:textColorHint">@color/grey</item>
         <item name="boxStrokeColor">@color/textInputLayoutColor</item>
         <item name="boxBackgroundColor">@color/textInputLayoutColor</item>
+    </style>
+
+    <!--Action bar style-->
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" >
+        <item name="android:windowContentOverlay">@null</item>
+        <!--below line used to change the color of home(back) button color-->
+        <item name="colorControlNormal">@color/grey</item>
+        <item name="android:background">@color/white</item>
+        <item name="elevation">0dp</item>
     </style>
 </resources>

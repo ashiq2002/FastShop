@@ -42,19 +42,20 @@
 
             <!--User email-->
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/userEmailLayout"
+                android:id="@+id/emailContainer"
                 style="@style/TextInputStyle"
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="wrap_content"
                 android:layout_marginHorizontal="15dp"
                 android:layout_marginTop="25dp"
+                app:helperTextTextColor="@color/red"
                 app:startIconDrawable="@drawable/ic_email"
                 app:layout_constraintEnd_toEndOf="@+id/textView"
                 app:layout_constraintStart_toStartOf="@+id/textView"
                 app:layout_constraintTop_toBottomOf="@+id/textView">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/userEmail"
+                    android:id="@+id/email"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:hint="@string/email"
@@ -66,20 +67,21 @@
 
             <!--User password-->
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/userPasswordLayout"
+                android:id="@+id/passwordContainer"
                 style="@style/TextInputStyle"
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="wrap_content"
                 android:layout_marginHorizontal="15dp"
                 android:layout_marginTop="25dp"
-                app:passwordToggleEnabled="true"
-                app:layout_constraintEnd_toEndOf="@+id/userEmailLayout"
-                app:layout_constraintStart_toStartOf="@+id/userEmailLayout"
-                app:layout_constraintTop_toBottomOf="@+id/userEmailLayout"
+                app:endIconMode="password_toggle"
+                app:helperTextTextColor="@color/red"
+                app:layout_constraintEnd_toEndOf="@+id/emailContainer"
+                app:layout_constraintStart_toStartOf="@+id/emailContainer"
+                app:layout_constraintTop_toBottomOf="@+id/emailContainer"
                 app:startIconDrawable="@drawable/ic_lock">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/userPassword"
+                    android:id="@+id/password"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:hint="@string/password"
@@ -91,7 +93,7 @@
 
             <!--Remember me-->
             <com.google.android.material.checkbox.MaterialCheckBox
-                android:id="@+id/materialCheckBox"
+                android:id="@+id/rememberMe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -99,9 +101,9 @@
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 app:buttonTint="@color/material_blueA200"
-                app:layout_constraintEnd_toEndOf="@+id/userPasswordLayout"
-                app:layout_constraintStart_toStartOf="@+id/userPasswordLayout"
-                app:layout_constraintTop_toBottomOf="@+id/userPasswordLayout" />
+                app:layout_constraintEnd_toEndOf="@+id/passwordContainer"
+                app:layout_constraintStart_toStartOf="@+id/passwordContainer"
+                app:layout_constraintTop_toBottomOf="@+id/passwordContainer" />
 
             <!--Sign in button-->
             <com.google.android.material.button.MaterialButton
@@ -117,9 +119,9 @@
                 android:textAllCaps="false"
                 android:textStyle="bold"
                 android:textSize="25sp"
-                app:layout_constraintEnd_toEndOf="@+id/materialCheckBox"
-                app:layout_constraintStart_toStartOf="@+id/materialCheckBox"
-                app:layout_constraintTop_toBottomOf="@+id/materialCheckBox" />
+                app:layout_constraintEnd_toEndOf="@+id/rememberMe"
+                app:layout_constraintStart_toStartOf="@+id/rememberMe"
+                app:layout_constraintTop_toBottomOf="@+id/rememberMe" />
 
             <!--Forgot password-->
             <TextView
@@ -151,7 +153,8 @@
                 <com.google.android.material.divider.MaterialDivider
                     android:layout_weight="1"
                     android:layout_width="0dp"
-                    android:layout_height="2dp"/>
+                    android:layout_height="1dp"
+                    android:background="@color/lightGrey"/>
 
                 <TextView
                     android:layout_width="0dp"
@@ -167,7 +170,8 @@
                 <com.google.android.material.divider.MaterialDivider
                     android:layout_weight="1"
                     android:layout_width="0dp"
-                    android:layout_height="2dp"/>
+                    android:layout_height="1dp"
+                    android:background="@color/lightGrey"/>
 
             </LinearLayout>
 

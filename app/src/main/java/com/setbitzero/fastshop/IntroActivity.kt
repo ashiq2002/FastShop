@@ -3,6 +3,7 @@ package com.setbitzero.fastshop
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.view.animation.AnimationUtils
 import androidx.viewpager2.widget.ViewPager2
@@ -116,6 +117,7 @@ class IntroActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         _binding = null
+        Log.wtf("DESTROY", "IntroActivity Destroyed")
     }
 
 }
